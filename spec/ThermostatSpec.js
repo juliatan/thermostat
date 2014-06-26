@@ -79,6 +79,22 @@ describe("Thermostat", function() {
     });
   });
 
-  
+  describe("Energy usage", function(){
+    it('should have a status of low if <18', function(){
+      thermostat.temperature = 17;
+      expect(thermostat.energyUsage()).toEqual('low')
+    });
+
+    it('should have a status of medium if <25', function(){
+      thermostat.temperature = 24;
+      expect(thermostat.energyUsage()).toEqual('medium')
+    });
+
+    it('should have a status of high if >=25', function(){
+      thermostat.temperature = 25;
+      expect(thermostat.energyUsage()).toEqual('high')
+    });
+
+  });
 
 });
