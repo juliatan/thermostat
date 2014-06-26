@@ -63,10 +63,22 @@ describe("Thermostat", function() {
         thermostat.increaseTemp();
         expect(thermostat.temperature).toEqual(21)
       });
+    });
+  });
 
+  describe("Decrease temperature", function(){
+    it('possible if temperature is >10', function(){
+      thermostat.decreaseTemp();
+      expect(thermostat.temperature).toEqual(19)
     });
 
+    it('is not possible if temperature <=10', function(){
+      thermostat.temperature = 10;
+      thermostat.decreaseTemp();
+      expect(thermostat.temperature).toEqual(10)
+    });
   });
 
   
+
 });

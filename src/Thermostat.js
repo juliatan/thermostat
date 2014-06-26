@@ -23,3 +23,9 @@ Thermostat.prototype.increaseTemp = function() {
     this.temperature += 1;
   }
 };
+
+Thermostat.prototype.decreaseTemp = function() {
+  if(this.temperature >10) {
+    this.temperature -= 1;
+  }
+};
