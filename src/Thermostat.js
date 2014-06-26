@@ -13,3 +13,13 @@ Thermostat.prototype.maxTemperature = function() {
   }
   return 32;
 };
+
+Thermostat.prototype.reset = function() {
+  return 20
+};
+
+Thermostat.prototype.increaseTemp = function() {
+  if(this.temperature <=25) {
+    this.temperature += 1;
+  }
+};
