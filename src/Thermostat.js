@@ -15,7 +15,7 @@ Thermostat.prototype.maxTemperature = function() {
 };
 
 Thermostat.prototype.reset = function() {
-  return 20
+  this.temperature = 20;
 };
 
 Thermostat.prototype.increaseTemp = function() {
