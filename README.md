@@ -18,7 +18,7 @@ Specifications
   - < 18 is green
   - < 25 is yellow
   - otherwise red
-- After every temperature change, the thermostat makes a POST request to localhost:4567/temperature_change, with the new temperature
+- After every temperature change, the thermostat displays the new temperature
 
 Technologies used
 -----------------
